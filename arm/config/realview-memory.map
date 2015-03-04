@@ -1,0 +1,45 @@
+Memory Map 
+----------
+taken from [RealViewEmulationBaseboard] 
+ literature/DUI0138E_CMxx6_UserGuide.pdf
+ section 6.5
+ 
+All numbers in hex
+0x00000000   64MiB RAM 
+0x10000000    4KiB System registers
+0x10001000    4KiB System controller 
+0x10002000    4KiB Two-Wire Serial Bus Interface
+0x10003000    4KiB Reserved
+0x10004000    4KiB Advanced Audio CODEC Interface
+0x10005000    4KiB MultiMedia Card Interface (MCI) 
+0x10006000    4KiB Keyboard/Mouse Interface 0 
+0x10007000    4KiB Keyboard/Mouse Interface 1 
+0x10008000    4KiB Character LCD Interface 
+0x10009000    4KiB UART 0 Interface 
+0x1000A000    4KiB UART 1 Interface 0
+0x1000B000    4KiB UART 2 Interface 
+0x1000C000    4KiB UART 3 Interface 
+0x1000D000    4KiB Synchronous Serial Port Interface 
+0x1000E000    4KiB Smart Card Interface 
+0x1000F000    4KiB Reserved
+0x10010000    4KiB Watchdog Interface 
+0x10011000    4KiB Timer modules 0 and 1 interface 
+		   (Timer 1 starts at 0x10011020) 
+0x10012000    4KiB Timer modules 2 and 3 interface 
+	      	   (Timer 3 starts at 0x10020020) 
+0x10013000    4KiB GPIO Interface 0
+0x10014000    4KiB GPIO Interface 1
+0x10015000    4KiB GPIO Interface 2 (miscellaneous onboard I/O) 
+0x10016000    4KiB Reserved
+0x10017000    4KiB Real Time Clock Interface 
+0x10018000    4KiB Dynamic Memory Controller configuration 
+0x10019000    4KiB PCI controller configuration registers 
+0x10020000   64KiB Color LCD Controller 
+0x10030000   64KiB DMA Controller configuration registers 
+0x10040000   64KiB Generic Interrupt Controller 1 (nIRQ for tile 1) 
+0x10050000   64KiB Generic Interrupt Controller 2 (nFIQ for tile 1) 
+0x10060000   64KiB Generic Interrupt Controller 3 (nIRQ for tile 2) 
+0x10070000   64KiB Generic Interrupt Controller 4 (nFIQ for tile 2) 
+0x10080000   64KiB Static Memory Controller configuration registers 
+
+

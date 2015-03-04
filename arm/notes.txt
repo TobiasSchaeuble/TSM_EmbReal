@@ -1,0 +1,82 @@
+Notes
+-----
+
+Your Notes:
+
+
+
+
+
+Install VM qemu 
+---------------
+Be sure that 
+ qemu-system-arm
+will be installed
+
+Setting Toolchain
+-----------------
+toolchain: gcc-4.9.1-arm-64bit.tar.gz
+
+assuming the following directorystructure
+
+resources
+  gcc-4.9.1-arm-64bit.tar.gz 
+
+we are in resources
+
+extract
+$ tar -xzvf gcc-4.9.1-arm-64bit.tar.gz 
+$ls 
+gcc-4.9.1-arm-64bit  gcc-4.9.1-arm-64bit.tar.gz
+
+go to repo/arm
+
+$cd path-to-repo-arm
+
+create link to toolchain
+$ln -s ../../resources/gcc-4.9.1-arm-64bit tc
+  
+Preparing Work:
+---------------
+$mkdir work
+
+$cd work
+$ln -s ../config/Makefile
+
+create empty make.rules 
+$touch make.rules
+
+$make rules
+
+$make hello-world
+
+when you see the messages:
+
+fatal error: can't create sys/stack.o: No such file or directory
+<builtin>: recipe for target 'sys/stack.o' failed
+                              |----------- create this directory
+
+create in work the appropriate directory:
+$mkdir sys
+
+repeat
+$make hello-world
+$mkdir the-directory
+
+until no fatal errors
+ 
+and run with a VM
+
+$ sh ../tool/run.sh hello-world
+
+Workflow
+--------
+
+1. edit hello-world.c
+
+2. $make hello-world
+
+and run again
+
+3. sh ../tool/run.sh hello-world
+go to 1.

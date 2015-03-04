@@ -1,0 +1,15 @@
+#--------------------------
+#indexer props
+#(c) H.Buchmann FHNW 2012
+#$Id$
+#--------------------------
+#home of the latex generated idx files
+IDX_HOME=../../slides/1-hardware-related-software
+IDX_FILES=1-intro 2-architecture 
+#3-hardware 4-interrupts 5-fast-machines
+
+#home of the source files
+SRC_HOME=../../sos
+
+#the path names blank *before* \ ist relevant
+EXCLUDE_DIR=tc .git work

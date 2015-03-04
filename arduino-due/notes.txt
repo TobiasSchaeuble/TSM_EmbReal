@@ -1,0 +1,47 @@
+Notes
+-----
+Im the scripts do not run on an Ubuntu System.
+
+replace sh with bash:
+
+sh foo-script.sh
+
+bash foo-script.sh
+
+TODO bash/sh bei Ubuntu
+
+Your notes:
+
+Prepare
+-------
+Install java
+Install minicom terminal (ubuntu apt-get install minicom)
+
+
+we are in repo
+
+
+$bash tool/make-work.sh
+
+$cd arduino-due/board
+
+make link to toolchain
+
+$ln -s path-to-toolchain tc
+
+$cd work
+
+make startup-1 as first of your program
+
+
+$make startup-1
+
+execute on the arduino-due
+- connnect both USB cables
+- start minicom in separate shell
+
+$minicom -D /dev/ttyXXX
+XXX typ. ACM0
+
+$sh ../tools/flash-1.sh startup-1
+

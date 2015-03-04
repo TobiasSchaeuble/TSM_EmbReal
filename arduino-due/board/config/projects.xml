@@ -1,0 +1,227 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE projects PUBLIC "3e37ecfe693b31a44c434b6193405efa" 
+                        "http:eo3s.hst.fhso.ch/eo3s/depend.dtd">
+
+<projects name="Arduino-Due">
+ 
+ <search>
+  <dir name="arduino-due/board/namespace"/>
+  <dir name="arduino-due/soc/3X/namespace"/>
+  <dir name="arduino-due/soc/namespace"/>
+  <dir name="arduino-due/cortex-m/namespace"/>
+  <dir name="arduino-due/arm/namespace"/>
+  <dir name="arduino-due/namespace"/>
+  <dir name="src/generic/namespace"/>
+ </search>
+
+ <specify prjmake="${LINK}">
+<!--
+  <spec mod="sys/table" type="S"/>
+-->
+  <spec mod="sys/boot/big-bang" type="S"/>
+  <spec mod="sys/deb/deblow0" type="S"/>
+  <spec mod="test/svc-handler" type="S"/>
+  <spec mod="cpu-demo-ops" type="S"/>
+
+<!--
+  <spec mod="sys/event" type="S"/>
+-->  
+ </specify>
+ 
+ <list name="minimum">
+  <mod name="sys/mem/ram0"/>
+  <mod name="sys/boot/big-bang"/>
+  <mod name="sys/abi/abi"/>
+  <mod name="sys/msg-1"/>
+  <mod name="sys/board"/>
+  <mod name="sys/table"/>
+  <mod name="sys/deb/deblow0"/>
+  <mod name="sys/sys"/>
+ </list>
+
+
+ <prj name="startup-1">
+  <ref id="minimum"/>
+  <mod name="test/startup-1"/>
+ </prj>
+
+
+ <prj name="led-demo">
+  <ref id="minimum"/>
+  <mod name="led-demo"/>
+ </prj>
+ 
+ <prj name="cpu-demo">
+  <ref id="minimum"/>
+  <mod name="cpu-demo"/>
+  <mod name="cpu-demo-ops"/>
+ </prj>
+ 
+ <prj name="memory-mapped-pointer-1">
+  <ref id="minimum"/>
+  <mod name="memory-mapped-pointer-1"/>
+ </prj>
+
+ <prj name="memory-mapped-pointer-2">
+  <ref id="minimum"/>
+  <mod name="memory-mapped-pointer-2"/>
+ </prj>
+
+ <prj name="memory-mapped-pointer-3">
+  <ref id="minimum"/>
+  <mod name="memory-mapped-pointer-3"/>
+ </prj>
+
+ <prj name="memory-mapped-pointer-4">
+  <ref id="minimum"/>
+  <mod name="memory-mapped-pointer-4"/>
+ </prj>
+
+ <prj name="memory-mapped-extern-1">
+  <ref id="minimum"/>
+  <mod name="memory-mapped-extern-1"/>
+ </prj>
+ 
+ <prj name="simple-uart">
+  <ref id="minimum"/>
+  <mod name="simple-uart"/>
+ </prj>
+ 
+ <prj name="interrupt-demo">
+  <ref id="minimum"/>
+  <mod name="interrupt-demo"/>
+ </prj>
+
+ <prj name="interrupt-demo-1">
+  <ref id="minimum"/>
+  <mod name="interrupt-demo-1"/>
+ </prj>
+ 
+ <prj name="interrupt-demo-2">
+  <ref id="minimum"/>
+  <mod name="interrupt-demo-2"/>
+ </prj>
+
+ <prj name="interrupt-demo-3">
+  <ref id="minimum"/>
+  <mod name="interrupt-demo-3"/>
+ </prj>
+
+
+ <prj name="interrupt-demo-4">
+  <ref id="minimum"/>
+  <mod name="interrupt-demo-4"/>
+ </prj>
+
+
+ <prj name="interrupt-demo-5">
+  <ref id="minimum"/>
+  <mod name="interrupt-demo-5"/>
+ </prj>
+
+
+ <prj name="interrupt-demo-6">
+  <ref id="minimum"/>
+  <mod name="interrupt-demo-6"/>
+ </prj>
+
+ <makefile>
+  <pre>
+#uncomment EARLY_INIT 
+# for deriving init sequence at link time 
+EARLY_INIT=EARLY_INIT
+
+
+
+#----------------- the tools  
+TC=../tc/bin/arm-none-linux-gnueabi-
+CC=${TC}gcc
+CXX=${TC}g++
+
+CLANG_OPTIONS=-std=c++11 -target armv7m--eabi -integrated-as
+#CC=clang++ ${CLANG_OPTIONS}
+#CXX=${CC}
+
+AS=${TC}as
+LD=${TC}ld
+NM=${TC}nm
+
+OBJCOPY=${TC}objcopy
+
+LIBGCC_DIR:=$(dir $(shell ${CXX} --print-libgcc-file-name))
+LIBGCC:=-L${LIBGCC_DIR} -lgcc
+ 
+CPPFLAGS= \
+ -include "sys/sys.h"\
+ $(foreach d,$(_dp_SRC_DIRS),-I $(d)) \
+ -DEARLY_INIT \
+ -DSYS_SYS_SHOW_STARTUP\
+ -DNO_LONG_DIV \
+ -DNO_FLOATS
+ 
+CPU=cortex-m3
+CFLAGS=-O2 -std=c++11 -mcpu=${CPU} -mthumb \
+             -fomit-frame-pointer\
+	     -fpermissive \
+             -fno-exceptions \
+	     -fuse-cxa-atexit \
+	     -nostdinc\
+	     -fno-builtin\
+	     -Wreturn-type\
+	     -Wall\
+	     -fno-rtti\
+	     -fno-unwind-tables \
+
+
+CXXFLAGS=${CFLAGS}
+#----------------- rule patterns
+%.o:	%.S; ${CC} ${CPPFLAGS} -E ${&lt;} | ${AS} -mcpu=${CPU} -o ${@}
+
+SHOW_NM=@${NM} ${^}
+SHOW_INIT_SEQUENCE=${NM} ${^} | ${BIN_HOME}/early-initialize.sh
+
+INIT_SEQUENCE=${NM} ${^} | \
+	${BIN_HOME}/early-initialize.sh | \
+	${CXX} ${CPPFLAGS} ${CXXFLAGS} -c -x c++ -o init-sequence.o -
+
+LINK=${INIT_SEQUENCE} &amp;&amp; \
+	${LD} -o ${@} ${^} init-sequence.o ${LIBGCC} --Map $@.map --build-id --script ../config/layout.ld &amp;&amp; \
+	${OBJCOPY} -O binary ${@} ${@}.bin
+
+#use GRAPH for creating a dependency graph
+GRAPH=@${NM}  ${^} | \
+ java -jar ${_dp_HOME}/tool/early-initialize.jar graph  | dot -Tpdf > ${@}.pdf
+   
+   ARCHITECTURE=cortex-m4
+   ENDIAN=LITTLE
+   OPTIMIZE=2
+   THUMB=yes
+   BIN_HOME=${_dp_HOME}/tool
+   SPECIAL_CXX=\
+   -mfloat-abi=soft\
+   -DNO_LONG_DIV \
+   -DNO_FLOATS \
+   -D'ATTRIBUTE_TEXT_STARTUP=__attribute((section(".text")))' \
+
+
+  </pre>
+
+  <post>
+projects:
+	${BIN_HOME}/projects.sh makefile ${_dp_PROJECTS_XML} > Makefile
+files:
+	@java -jar ${BIN_HOME}/projects.jar files ${_dp_PROJECTS_XML} ${_dp_HOME} | sort
+all:	${_dp_PRJ_LIST}
+clean:	
+	rm -f ${_dp_MOD_LIST} ${_dp_PRJ_LIST}
+namespace:
+	mkdir -p ${_dp_NAMESPACE}
+
+#general rules
+# all depends on sys/sys.h
+   ${_dp_MOD_LIST}: sys/sys.h
+  </post>
+ </makefile>
+
+</projects>

@@ -1,0 +1,823 @@
+
+Discarded input sections
+
+ .group         0x0000000000000000        0xc sys/msg-1.o
+ .group         0x0000000000000000        0xc sys/msg-1.o
+ .group         0x0000000000000000       0x10 sys/msg-1.o
+ .group         0x0000000000000000        0x8 sys/msg-1.o
+ .group         0x0000000000000000        0x8 sys/msg-1.o
+ .group         0x0000000000000000        0xc sys/msg.o
+ .group         0x0000000000000000        0xc sys/msg.o
+ .group         0x0000000000000000       0x10 sys/msg.o
+ .text._ZN2io5ascii6Writer9FormatterD2Ev
+                0x0000000000000000        0x4 sys/msg.o
+ .text._ZN2io5ascii6WriterD2Ev
+                0x0000000000000000        0x4 sys/msg.o
+ .text._ZN2io5ascii6Writer9FormatterD0Ev
+                0x0000000000000000        0xc sys/msg.o
+ .text._ZN2io5ascii6WriterD0Ev
+                0x0000000000000000        0xc sys/msg.o
+ .group         0x0000000000000000        0xc io/ascii/write.o
+ .group         0x0000000000000000        0xc io/ascii/write.o
+ .group         0x0000000000000000        0xc io/ascii/write.o
+ .group         0x0000000000000000        0xc io/ascii/write.o
+ .group         0x0000000000000000        0xc io/ascii/write.o
+ .group         0x0000000000000000        0xc io/ascii/write.o
+ .group         0x0000000000000000        0xc io/ascii/write.o
+ .group         0x0000000000000000        0x8 io/ascii/write.o
+ .group         0x0000000000000000        0x8 io/ascii/write.o
+ .group         0x0000000000000000        0x8 io/ascii/write.o
+ .group         0x0000000000000000        0x8 io/ascii/write.o
+ .group         0x0000000000000000        0x8 io/ascii/write.o
+ .group         0x0000000000000000        0x8 io/ascii/write.o
+ .group         0x0000000000000000        0x8 io/ascii/write.o
+ .group         0x0000000000000000        0xc io/ascii/write.o
+ .group         0x0000000000000000        0x8 io/ascii/write.o
+ .group         0x0000000000000000        0xc io/ascii/write.o
+ .group         0x0000000000000000        0x8 io/ascii/write.o
+ .group         0x0000000000000000        0xc io/ascii/write.o
+ .group         0x0000000000000000        0x8 io/ascii/write.o
+ .group         0x0000000000000000        0xc io/ascii/write.o
+ .group         0x0000000000000000        0x8 io/ascii/write.o
+ .group         0x0000000000000000        0x8 io/ascii/write.o
+ .group         0x0000000000000000        0x8 io/ascii/write.o
+ .group         0x0000000000000000        0x8 io/ascii/write.o
+ .group         0x0000000000000000        0x8 io/ascii/write.o
+ .text._ZN2io5ascii6Writer9FormatterD2Ev
+                0x0000000000000000        0x4 io/ascii/write.o
+ .text._ZN2io5ascii6WriterD2Ev
+                0x0000000000000000        0x4 io/ascii/write.o
+ .text._ZN2io5ascii6Writer9FormatterD0Ev
+                0x0000000000000000        0xc io/ascii/write.o
+ .text._ZN2io5ascii6WriterD0Ev
+                0x0000000000000000        0xc io/ascii/write.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD sys/mem/ram0.o
+LOAD sys/deb/deb.o
+LOAD sys/deb/deblow.o
+LOAD sys/reg/pio.o
+LOAD sys/reg/pio0.o
+LOAD sys/hwreg.o
+LOAD sys/reg/uart.o
+LOAD sys/reg/uart0.o
+LOAD sys/boot/big-bang.o
+LOAD sys/abi/abi.o
+LOAD sys/msg-1.o
+LOAD sys/msg.o
+LOAD io/ascii/out.o
+LOAD io/ascii/write.o
+LOAD util/float-conv.o
+LOAD math/double.o
+LOAD sys/board.o
+LOAD sys/cortex-m.o
+LOAD sys/reg/scs.o
+LOAD sys/vtable.o
+LOAD sys/trap.o
+LOAD sys/soc.o
+LOAD sys/reg/pmc.o
+LOAD sys/reg/wdt.o
+LOAD sys/reg/eefc.o
+LOAD sys/boot/big-bang-continued.o
+LOAD sys/table.o
+LOAD sys/deb/deblow0.o
+LOAD sys/sys.o
+LOAD test/startup-1.o
+LOAD init-sequence.o
+LOAD /home/tobias/Documents/fhnw-ime-mse/gcc-4.9.2-arm-64bit/bin/../lib/gcc/arm-none-linux-gnueabi/4.9.2//libgcc.a
+
+.text           0x0000000000000000     0x211c
+ *(.boot)
+ .boot          0x0000000000000000        0xc sys/boot/big-bang.o
+ *(.glue_7)
+ .glue_7        0x000000000000000c        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x000000000000000c        0x0 linker stubs
+ *(.text.startup .text .text.*)
+ .text          0x000000000000000c       0x60 sys/mem/ram0.o
+                0x000000000000000c                operator new(unsigned int)
+                0x0000000000000024                operator delete(void*)
+                0x000000000000003c                operator new[](unsigned int)
+                0x0000000000000054                operator delete[](void*)
+ .text          0x000000000000006c      0x310 sys/deb/deb.o
+                0x00000000000000b0                sys::deb::out(char const*)
+                0x00000000000000d0                sys::deb::pressAnyKey(char const*)
+                0x00000000000000e8                sys::deb::waitForKey(char)
+                0x0000000000000110                sys::deb::out(unsigned int)
+                0x0000000000000158                sys::deb::out(int)
+                0x0000000000000174                sys::deb::out(void const*)
+                0x0000000000000198                sys::deb::out(char const*, unsigned int)
+                0x00000000000001bc                sys::deb::out(char const*, void const*)
+                0x00000000000001e0                sys::deb::out(char const*, unsigned int const*, unsigned int)
+                0x0000000000000220                sys::deb::out(char const*, char const*)
+                0x0000000000000244                sys::deb::newln()
+                0x0000000000000250                sys::deb::hex(unsigned char)
+                0x0000000000000254                sys::deb::hex(unsigned short)
+                0x000000000000027c                sys::deb::hex(unsigned int)
+                0x0000000000000280                sys::deb::hex(unsigned long long)
+                0x00000000000002c0                sys::deb::hex(char const*, unsigned int)
+                0x00000000000002dc                sys::deb::hex(char const*, unsigned int*, unsigned int)
+                0x0000000000000314                sys::deb::dump(unsigned char const*, unsigned int)
+                0x0000000000000364                sys::deb::dump(char const*, unsigned int)
+ .text          0x000000000000037c      0x120 sys/deb/deblow.o
+                0x000000000000037c                sys::deb::init()
+                0x0000000000000388                sys::deb::signal0()
+                0x00000000000003b4                sys::deb::signal1()
+                0x00000000000003e0                sys::deb::signal2()
+                0x000000000000040c                sys::deb::signal3()
+                0x000000000000044c                sys::deb::out(char)
+                0x0000000000000470                sys::deb::get()
+                0x0000000000000484                sys::deb::avail()
+                0x0000000000000494                sys::deb::enter()
+                0x0000000000000498                sys::deb::halt()
+ .text          0x000000000000049c       0x30 sys/reg/pio.o
+                0x000000000000049c                sys::reg::PIO::set(sys::reg::PIO::Function, unsigned int) volatile
+ .text          0x00000000000004cc        0x0 sys/reg/pio0.o
+ .text          0x00000000000004cc        0x0 sys/hwreg.o
+ .text          0x00000000000004cc        0x0 sys/reg/uart.o
+ .text          0x00000000000004cc        0x0 sys/reg/uart0.o
+ .text          0x00000000000004cc        0x0 sys/boot/big-bang.o
+ .text          0x00000000000004cc       0xd4 sys/abi/abi.o
+                0x00000000000004cc                sys::abi::Dtor::Stack::Stack(sys::abi::Dtor*, unsigned int)
+                0x00000000000004cc                sys::abi::Dtor::Stack::Stack(sys::abi::Dtor*, unsigned int)
+                0x00000000000004e8                sys::abi::Dtor::Stack::push(void (*)(void*), void*)
+                0x0000000000000500                sys::abi::Dtor::push(void (*)(void*), void*)
+                0x0000000000000540                sys::abi::Dtor::Stack::finalize()
+                0x0000000000000568                __cxa_pure_virtual
+                0x0000000000000574                __cxa_guard_acquire
+                0x0000000000000580                __cxa_guard_release
+                0x0000000000000584                __cxa_atexit
+                0x0000000000000590                __aeabi_atexit
+ .text          0x00000000000005a0       0x24 sys/msg-1.o
+                0x00000000000005a0                sys::Msg_1::Msg_1()
+                0x00000000000005a0                sys::Msg_1::Msg_1()
+ .text._ZN2io5ascii6Writer9FormatterD2Ev
+                0x00000000000005c4        0x4 sys/msg-1.o
+                0x00000000000005c4                io::ascii::Writer::Formatter::~Formatter()
+                0x00000000000005c4                io::ascii::Writer::Formatter::~Formatter()
+ .text._ZN2io5ascii6WriterD2Ev
+                0x00000000000005c8        0x4 sys/msg-1.o
+                0x00000000000005c8                io::ascii::Writer::~Writer()
+                0x00000000000005c8                io::ascii::Writer::~Writer()
+ .text._ZN3sys5Msg_1D2Ev
+                0x00000000000005cc       0x24 sys/msg-1.o
+                0x00000000000005cc                sys::Msg_1::~Msg_1()
+                0x00000000000005cc                sys::Msg_1::~Msg_1()
+ .text._ZN3sys5Msg_1D1Ev
+                0x00000000000005f0       0x10 sys/msg-1.o
+                0x00000000000005f0                non-virtual thunk to sys::Msg_1::~Msg_1()
+                0x00000000000005f8                non-virtual thunk to sys::Msg_1::~Msg_1()
+ .text._ZN2io5ascii6Writer9FormatterD0Ev
+                0x0000000000000600        0xc sys/msg-1.o
+                0x0000000000000600                io::ascii::Writer::Formatter::~Formatter()
+ .text._ZN2io5ascii6WriterD0Ev
+                0x000000000000060c        0xc sys/msg-1.o
+                0x000000000000060c                io::ascii::Writer::~Writer()
+ .text._ZN3sys5Msg_13putEc
+                0x0000000000000618       0x10 sys/msg-1.o
+                0x0000000000000618                sys::Msg_1::put(char)
+                0x0000000000000620                non-virtual thunk to sys::Msg_1::put(char)
+ .text._ZN3sys5Msg_1D0Ev
+                0x0000000000000628       0x38 sys/msg-1.o
+                0x0000000000000628                sys::Msg_1::~Msg_1()
+                0x0000000000000650                non-virtual thunk to sys::Msg_1::~Msg_1()
+                0x0000000000000658                non-virtual thunk to sys::Msg_1::~Msg_1()
+ .text.startup  0x0000000000000660       0x3c sys/msg-1.o
+ .text          0x000000000000069c       0x74 sys/msg.o
+                0x000000000000069c                sys::Msg::Msg(io::ascii::Output&)
+                0x000000000000069c                sys::Msg::Msg(io::ascii::Output&)
+                0x00000000000006b8                sys::Msg::error()
+                0x00000000000006d0                sys::Msg::warning()
+                0x00000000000006e4                sys::Msg::halt()
+                0x00000000000006f4                sys::Msg::onEoL(io::ascii::Output&)
+                0x00000000000006fc                non-virtual thunk to sys::Msg::onEoL(io::ascii::Output&)
+                0x0000000000000704                sys::Msg::debug()
+ .text._ZN3sys3MsgD2Ev
+                0x0000000000000710        0x4 sys/msg.o
+                0x0000000000000710                sys::Msg::~Msg()
+                0x0000000000000710                sys::Msg::~Msg()
+ .text._ZN3sys3MsgD1Ev
+                0x0000000000000714        0x8 sys/msg.o
+                0x0000000000000714                non-virtual thunk to sys::Msg::~Msg()
+ .text._ZN3sys3MsgD0Ev
+                0x000000000000071c       0x14 sys/msg.o
+                0x000000000000071c                sys::Msg::~Msg()
+                0x0000000000000728                non-virtual thunk to sys::Msg::~Msg()
+ .text          0x0000000000000730       0xe0 io/ascii/out.o
+                0x0000000000000730                io::ascii::Output::put(char const*)
+                0x000000000000074c                io::ascii::Entaber::~Entaber()
+                0x000000000000074c                io::ascii::Entaber::~Entaber()
+                0x0000000000000750                io::ascii::Entaber::put(char)
+                0x00000000000007dc                io::ascii::Entaber::~Entaber()
+                0x00000000000007e8                io::ascii::Output::~Output()
+                0x00000000000007e8                io::ascii::Output::~Output()
+                0x00000000000007ec                io::ascii::Output::~Output()
+                0x00000000000007f8                io::ascii::Entaber::Entaber(io::ascii::Output&, unsigned int)
+                0x00000000000007f8                io::ascii::Entaber::Entaber(io::ascii::Output&, unsigned int)
+ .text          0x0000000000000810      0x8f4 io/ascii/write.o
+                0x0000000000000810                io::ascii::Writer::DefaultEoL::onEoL(io::ascii::Output&)
+                0x0000000000000814                io::ascii::Writer::Hex::put(char*, unsigned short) const
+                0x000000000000083c                io::ascii::Writer::Hex::put(char*, unsigned int) const
+                0x0000000000000864                io::ascii::Writer::Writer(io::ascii::Output&)
+                0x0000000000000864                io::ascii::Writer::Writer(io::ascii::Output&)
+                0x00000000000008d0                io::ascii::Writer::Writer(io::ascii::Output&, io::ascii::Writer::EoLListener&)
+                0x00000000000008d0                io::ascii::Writer::Writer(io::ascii::Output&, io::ascii::Writer::EoLListener&)
+                0x0000000000000938                io::ascii::Writer::newLine()
+                0x0000000000000974                io::ascii::Writer::putChar(char)
+                0x00000000000009b0                io::ascii::Writer::putReverse(char const*, unsigned int)
+                0x00000000000009ec                io::ascii::Writer::Dec::put(unsigned long long) const
+                0x00000000000009fc                io::ascii::Writer::Dec::put(long long) const
+                0x0000000000000a4c                io::ascii::Writer::Dec::put(unsigned char) const
+                0x0000000000000a50                io::ascii::Writer::Dec::put(unsigned int) const
+                0x0000000000000a54                io::ascii::Writer::Dec::put(unsigned short) const
+                0x0000000000000a94                io::ascii::Writer::Dec::put(int) const
+                0x0000000000000b2c                io::ascii::Writer::Hex::put(unsigned int) const
+                0x0000000000000b30                io::ascii::Writer::Hex::put(unsigned short) const
+                0x0000000000000b70                io::ascii::Writer::Hex::put(unsigned char) const
+                0x0000000000000bf4                io::ascii::Writer::Hex::put(unsigned long long) const
+                0x0000000000000bf8                io::ascii::Writer::putX_(char const*)
+                0x0000000000000c38                io::ascii::Writer::LeftAlign::put(char const*) const
+                0x0000000000000c40                io::ascii::Writer::putX_(char const*, unsigned int)
+                0x0000000000000c98                io::ascii::Writer::LeftAlign::put(char const*, unsigned int) const
+                0x0000000000000ca0                io::ascii::Writer::put_XLine(char const*, unsigned int)
+                0x0000000000000cd4                io::ascii::Writer::put_X(char const*, unsigned int)
+                0x0000000000000d44                io::ascii::Writer::RightAlign::put(char const*, unsigned int) const
+                0x0000000000000d4c                io::ascii::Writer::put_X(char const*)
+                0x0000000000000dc4                io::ascii::Writer::RightAlign::put(char const*) const
+                0x0000000000000dcc                io::ascii::Writer::fillLeft(unsigned int)
+                0x0000000000000dec                io::ascii::Writer::put(char)
+                0x0000000000000df8                io::ascii::Writer::put(char const*)
+                0x0000000000000e20                io::ascii::Writer::put(char const*, unsigned int)
+                0x0000000000000e5c                io::ascii::Writer::setw(int)
+                0x0000000000000e70                io::ascii::Writer::indent(unsigned int)
+                0x0000000000000e74                io::ascii::Writer::put(unsigned char)
+                0x0000000000000e84                io::ascii::Writer::put(unsigned int)
+                0x0000000000000e94                io::ascii::Writer::put(unsigned short)
+                0x0000000000000ea4                io::ascii::Writer::put(int)
+                0x0000000000000eb4                io::ascii::Writer::put(unsigned long long)
+                0x0000000000000ec4                io::ascii::Writer::put(long long)
+                0x0000000000000ed4                io::ascii::Writer::put(void const*)
+                0x0000000000000ef4                io::ascii::Writer::put(bool)
+                0x0000000000000f08                io::ascii::Writer::rep(unsigned int, char const*)
+                0x0000000000000f24                io::ascii::Writer::dump(unsigned int, io::ascii::Writer::BitDesc const*)
+                0x0000000000000f68                io::ascii::Writer::debug()
+                0x0000000000000f6c                io::ascii::Writer::hex(unsigned int)
+                0x0000000000000f70                io::ascii::Writer::hex(unsigned short)
+                0x0000000000000f74                io::ascii::Writer::hex(unsigned char)
+                0x0000000000000f78                io::ascii::Writer::hex(char)
+                0x0000000000000f7c                io::ascii::Writer::dump(char const*, unsigned int, unsigned int)
+                0x0000000000000fd8                io::ascii::Writer::dump(unsigned char const*, unsigned int, unsigned int)
+                0x0000000000001034                io::ascii::Writer::dump(unsigned int const*, unsigned int, unsigned int)
+                0x00000000000010a0                io::ascii::Writer::dump(unsigned short const*, unsigned int, unsigned int)
+ .text._ZN2io5ascii6Writer9LeftAlignD2Ev
+                0x0000000000001104        0x4 io/ascii/write.o
+                0x0000000000001104                io::ascii::Writer::LeftAlign::~LeftAlign()
+                0x0000000000001104                io::ascii::Writer::LeftAlign::~LeftAlign()
+ .text._ZN2io5ascii6Writer10RightAlignD2Ev
+                0x0000000000001108        0x4 io/ascii/write.o
+                0x0000000000001108                io::ascii::Writer::RightAlign::~RightAlign()
+                0x0000000000001108                io::ascii::Writer::RightAlign::~RightAlign()
+ .text._ZN2io5ascii6Writer10DefaultEoLD2Ev
+                0x000000000000110c        0x4 io/ascii/write.o
+                0x000000000000110c                io::ascii::Writer::DefaultEoL::~DefaultEoL()
+                0x000000000000110c                io::ascii::Writer::DefaultEoL::~DefaultEoL()
+ .text._ZN2io5ascii6Writer3HexD2Ev
+                0x0000000000001110        0x4 io/ascii/write.o
+                0x0000000000001110                io::ascii::Writer::Hex::~Hex()
+                0x0000000000001110                io::ascii::Writer::Hex::~Hex()
+ .text._ZN2io5ascii6Writer3DecD2Ev
+                0x0000000000001114        0x4 io/ascii/write.o
+                0x0000000000001114                io::ascii::Writer::Dec::~Dec()
+                0x0000000000001114                io::ascii::Writer::Dec::~Dec()
+ .text._ZN2io5ascii6Writer10DefaultEoLD0Ev
+                0x0000000000001118        0xc io/ascii/write.o
+                0x0000000000001118                io::ascii::Writer::DefaultEoL::~DefaultEoL()
+ .text._ZN2io5ascii6Writer10RightAlignD0Ev
+                0x0000000000001124        0xc io/ascii/write.o
+                0x0000000000001124                io::ascii::Writer::RightAlign::~RightAlign()
+ .text._ZN2io5ascii6Writer9LeftAlignD0Ev
+                0x0000000000001130        0xc io/ascii/write.o
+                0x0000000000001130                io::ascii::Writer::LeftAlign::~LeftAlign()
+ .text._ZN2io5ascii6Writer3HexD0Ev
+                0x000000000000113c        0xc io/ascii/write.o
+                0x000000000000113c                io::ascii::Writer::Hex::~Hex()
+ .text._ZN2io5ascii6Writer3DecD0Ev
+                0x0000000000001148        0xc io/ascii/write.o
+                0x0000000000001148                io::ascii::Writer::Dec::~Dec()
+ .text._ZNK2io5ascii6Writer3Hex3putEi
+                0x0000000000001154       0x20 io/ascii/write.o
+                0x0000000000001154                io::ascii::Writer::Hex::put(int) const
+ .text._ZNK2io5ascii6Writer3Hex3putEx
+                0x0000000000001174       0x20 io/ascii/write.o
+                0x0000000000001174                io::ascii::Writer::Hex::put(long long) const
+ .text._ZN2io5ascii6Writer8putAsHexIjEERS1_T_
+                0x0000000000001194       0x38 io/ascii/write.o
+                0x0000000000001194                io::ascii::Writer& io::ascii::Writer::putAsHex<unsigned int>(unsigned int)
+ .text._ZN2io5ascii6Writer8putAsHexItEERS1_T_
+                0x00000000000011cc       0x34 io/ascii/write.o
+                0x00000000000011cc                io::ascii::Writer& io::ascii::Writer::putAsHex<unsigned short>(unsigned short)
+ .text._ZN2io5ascii6Writer8putAsHexIhEERS1_T_
+                0x0000000000001200       0x30 io/ascii/write.o
+                0x0000000000001200                io::ascii::Writer& io::ascii::Writer::putAsHex<unsigned char>(unsigned char)
+ .text._ZN2io5ascii6Writer8putAsHexIcEERS1_T_
+                0x0000000000001230       0x30 io/ascii/write.o
+                0x0000000000001230                io::ascii::Writer& io::ascii::Writer::putAsHex<char>(char)
+ .text._ZN2io5ascii6Writer8DumpLineIcE4showEv
+                0x0000000000001260       0xdc io/ascii/write.o
+                0x0000000000001260                io::ascii::Writer::DumpLine<char>::show()
+ .text._ZN2io5ascii6Writer8DumpLineIcED2Ev
+                0x000000000000133c       0x14 io/ascii/write.o
+                0x000000000000133c                io::ascii::Writer::DumpLine<char>::~DumpLine()
+                0x000000000000133c                io::ascii::Writer::DumpLine<char>::~DumpLine()
+ .text._ZN2io5ascii6Writer8DumpLineIcED0Ev
+                0x0000000000001350       0x1c io/ascii/write.o
+                0x0000000000001350                io::ascii::Writer::DumpLine<char>::~DumpLine()
+ .text._ZN2io5ascii6Writer8DumpLineIhE4showEv
+                0x000000000000136c       0xdc io/ascii/write.o
+                0x000000000000136c                io::ascii::Writer::DumpLine<unsigned char>::show()
+ .text._ZN2io5ascii6Writer8DumpLineIhED2Ev
+                0x0000000000001448       0x14 io/ascii/write.o
+                0x0000000000001448                io::ascii::Writer::DumpLine<unsigned char>::~DumpLine()
+                0x0000000000001448                io::ascii::Writer::DumpLine<unsigned char>::~DumpLine()
+ .text._ZN2io5ascii6Writer8DumpLineIhED0Ev
+                0x000000000000145c       0x1c io/ascii/write.o
+                0x000000000000145c                io::ascii::Writer::DumpLine<unsigned char>::~DumpLine()
+ .text._ZN2io5ascii6Writer8DumpLineIjE4showEv
+                0x0000000000001478       0xbc io/ascii/write.o
+                0x0000000000001478                io::ascii::Writer::DumpLine<unsigned int>::show()
+ .text._ZN2io5ascii6Writer8DumpLineIjED2Ev
+                0x0000000000001534       0x14 io/ascii/write.o
+                0x0000000000001534                io::ascii::Writer::DumpLine<unsigned int>::~DumpLine()
+                0x0000000000001534                io::ascii::Writer::DumpLine<unsigned int>::~DumpLine()
+ .text._ZN2io5ascii6Writer8DumpLineIjED0Ev
+                0x0000000000001548       0x1c io/ascii/write.o
+                0x0000000000001548                io::ascii::Writer::DumpLine<unsigned int>::~DumpLine()
+ .text._ZN2io5ascii6Writer8DumpLineItE4showEv
+                0x0000000000001564       0xc4 io/ascii/write.o
+                0x0000000000001564                io::ascii::Writer::DumpLine<unsigned short>::show()
+ .text._ZN2io5ascii6Writer8DumpLineItED2Ev
+                0x0000000000001628       0x14 io/ascii/write.o
+                0x0000000000001628                io::ascii::Writer::DumpLine<unsigned short>::~DumpLine()
+                0x0000000000001628                io::ascii::Writer::DumpLine<unsigned short>::~DumpLine()
+ .text._ZN2io5ascii6Writer8DumpLineItED0Ev
+                0x000000000000163c       0x1c io/ascii/write.o
+                0x000000000000163c                io::ascii::Writer::DumpLine<unsigned short>::~DumpLine()
+ .text          0x0000000000001658        0x0 util/float-conv.o
+ .text          0x0000000000001658        0x0 math/double.o
+ .text          0x0000000000001658      0x1bc sys/board.o
+                0x0000000000001658                sys::Board::pmc()
+                0x00000000000016d4                sys::Board::uart()
+                0x0000000000001710                sys::Board::data()
+                0x000000000000174c                sys::Board::bss()
+                0x0000000000001778                sys::Board::bigBang()
+                0x00000000000017f8                sys::Board::Board()
+                0x00000000000017f8                sys::Board::Board()
+ .text.startup  0x0000000000001814       0x20 sys/board.o
+ .text          0x0000000000001834       0xe4 sys/cortex-m.o
+                0x0000000000001834                sys::CortexM::CortexM(void (* const*)(), unsigned int, sys::Trap**)
+                0x0000000000001834                sys::CortexM::CortexM(void (* const*)(), unsigned int, sys::Trap**)
+                0x0000000000001870                sys::CortexM::trapIt()
+                0x000000000000188c                sys::CortexM::inRange(unsigned int)
+                0x00000000000018a0                sys::CortexM::arm(unsigned int)
+                0x00000000000018c8                sys::CortexM::disarm(unsigned int)
+                0x00000000000018f0                sys::CortexM::install(unsigned int, sys::Trap*)
+                0x0000000000001908                sys::CortexM::cpsIE_i()
+                0x000000000000190c                sys::CortexM::cpsID_i()
+                0x0000000000001910                sys::CortexM::cpsIE_f()
+                0x0000000000001914                sys::CortexM::cpsID_f()
+ .text          0x0000000000001918        0x0 sys/reg/scs.o
+ .text          0x0000000000001918        0x0 sys/vtable.o
+ .text          0x0000000000001918        0x0 sys/trap.o
+ .text          0x0000000000001918       0x60 sys/soc.o
+                0x0000000000001918                sys::SOC::clockEnable(sys::SOC::PID)
+                0x0000000000001938                sys::SOC::clockDisable(sys::SOC::PID)
+                0x0000000000001958                sys::SOC::arm()
+                0x0000000000001968                sys::SOC::disarm()
+ .text          0x0000000000001978        0x0 sys/reg/pmc.o
+ .text          0x0000000000001978        0x0 sys/reg/wdt.o
+ .text          0x0000000000001978        0x0 sys/reg/eefc.o
+ .text          0x0000000000001978       0x5c sys/boot/big-bang-continued.o
+                0x0000000000001978                sys::boot::start()
+ .text          0x00000000000019d4        0x0 sys/table.o
+ .text          0x00000000000019d4       0x3c sys/deb/deblow0.o
+                0x00000000000019d4                sys_deb_wait
+                0x00000000000019d4                sys::deb::wait(unsigned int)
+                0x00000000000019da                hex
+ .text          0x0000000000001a10       0x98 sys/sys.o
+                0x0000000000001a10                sys::Mod::start()
+                0x0000000000001a60                sys::Mod::stop()
+                0x0000000000001a64                sys::buildId()
+ .text          0x0000000000001aa8       0x90 test/startup-1.o
+                0x0000000000001aa8                test::Startup::~Startup()
+                0x0000000000001aa8                test::Startup::~Startup()
+                0x0000000000001acc                test::Startup::Startup()
+                0x0000000000001acc                test::Startup::Startup()
+ .text.startup  0x0000000000001b38       0x24 test/startup-1.o
+ .text          0x0000000000001b5c        0x0 init-sequence.o
+ *(.rodata)
+ .rodata        0x0000000000001b5c       0x78 sys/mem/ram0.o
+ .rodata        0x0000000000001bd4       0x5c sys/deb/deb.o
+ .rodata        0x0000000000001c30        0x4 sys/msg-1.o
+                0x0000000000001c30                sys::msg
+ *fill*         0x0000000000001c34        0x4 
+ .rodata        0x0000000000001c38       0x28 sys/msg.o
+                0x0000000000001c38                vtable for sys::Msg
+ .rodata        0x0000000000001c60       0x30 io/ascii/out.o
+                0x0000000000001c60                vtable for io::ascii::Entaber
+                0x0000000000001c78                vtable for io::ascii::Output
+ .rodata        0x0000000000001c90       0xc8 io/ascii/write.o
+                0x0000000000001c90                io::ascii::Writer::Digits_
+                0x0000000000001cb0                vtable for io::ascii::Writer::Dec
+                0x0000000000001cd8                vtable for io::ascii::Writer::Hex
+                0x0000000000001d00                vtable for io::ascii::Writer::LeftAlign
+                0x0000000000001d18                vtable for io::ascii::Writer::RightAlign
+                0x0000000000001d30                vtable for io::ascii::Writer::DefaultEoL
+                0x0000000000001d4f                io::ascii::Writer::Fill
+                0x0000000000001d50                io::ascii::Writer::Digits
+ *fill*         0x0000000000001d58       0x28 
+ .rodata        0x0000000000001d80      0x100 sys/soc.o
+                0x0000000000001d80                sys::SOC::TheVector
+ .rodata        0x0000000000001e80       0x38 test/startup-1.o
+ .rodata        0x0000000000001eb8       0x20 init-sequence.o
+                0x0000000000001eb8                __InitSequence
+ *(.rodata.*)
+ .rodata.str1.4
+                0x0000000000001ed8       0x2a sys/mem/ram0.o
+                                         0x2c (size before relaxing)
+ *fill*         0x0000000000001f02        0x2 
+ .rodata.str1.4
+                0x0000000000001f04       0x3f sys/deb/deb.o
+                                         0x40 (size before relaxing)
+ *fill*         0x0000000000001f43        0x1 
+ .rodata.str1.4
+                0x0000000000001f44       0x74 sys/abi/abi.o
+ .rodata._ZTVN3sys5Msg_1E
+                0x0000000000001fb8       0x48 sys/msg-1.o
+                0x0000000000001fb8                vtable for sys::Msg_1
+ .rodata.str1.4
+                0x0000000000002000       0x37 sys/msg.o
+                                         0x38 (size before relaxing)
+ *fill*         0x0000000000002037        0x1 
+ .rodata._ZTVN2io5ascii6WriterE
+                0x0000000000002038       0x10 io/ascii/write.o
+                0x0000000000002038                vtable for io::ascii::Writer
+ .rodata._ZTVN2io5ascii6Writer8DumpLineIcEE
+                0x0000000000002048       0x10 io/ascii/write.o
+                0x0000000000002048                vtable for io::ascii::Writer::DumpLine<char>
+ .rodata._ZTVN2io5ascii6Writer8DumpLineIhEE
+                0x0000000000002058       0x10 io/ascii/write.o
+                0x0000000000002058                vtable for io::ascii::Writer::DumpLine<unsigned char>
+ .rodata._ZTVN2io5ascii6Writer8DumpLineIjEE
+                0x0000000000002068       0x10 io/ascii/write.o
+                0x0000000000002068                vtable for io::ascii::Writer::DumpLine<unsigned int>
+ .rodata._ZTVN2io5ascii6Writer8DumpLineItEE
+                0x0000000000002078       0x10 io/ascii/write.o
+                0x0000000000002078                vtable for io::ascii::Writer::DumpLine<unsigned short>
+ .rodata.str1.4
+                0x0000000000002088       0x26 io/ascii/write.o
+                                         0x3c (size before relaxing)
+ *fill*         0x00000000000020ae        0x2 
+ .rodata.str1.4
+                0x00000000000020b0        0x2 sys/sys.o
+                                          0x4 (size before relaxing)
+ *fill*         0x00000000000020b2        0x2 
+ .rodata.str1.4
+                0x00000000000020b4        0xa test/startup-1.o
+                                         0x10 (size before relaxing)
+ *fill*         0x00000000000020be        0x2 
+ .rodata.str1.4
+                0x00000000000020c0       0x28 init-sequence.o
+ *(.module)
+ *(.gnu.linkonce.*)
+                0x00000000000020e8                . = ALIGN (0x4)
+                0x00000000000020e8                __GLOBAL__CONSTRUCTORS = .
+                0x00000000000020e8                __GLOBAL__CONSTRUCTORS_BEG = .
+ *(.init_array)
+ .init_array    0x00000000000020e8        0x4 sys/msg-1.o
+ .init_array    0x00000000000020ec        0x4 sys/board.o
+ .init_array    0x00000000000020f0        0x4 test/startup-1.o
+                0x00000000000020f4                __GLOBAL__CONSTRUCTORS_END = .
+                0x00000000000020f4        0x4 LONG 0x0
+                0x00000000000020f8                . = ALIGN (0x4)
+                0x00000000000020f8                __BUILD_ID = .
+ *(.note.gnu.build-id)
+ .note.gnu.build-id
+                0x00000000000020f8       0x24 linker stubs
+                0x000000000000211c                _text_end = .
+
+.iplt           0x000000000000211c        0x0
+ .iplt          0x000000000000211c        0x0 sys/mem/ram0.o
+
+.rel.dyn        0x000000000000211c        0x0
+ .rel.iplt      0x000000000000211c        0x0 sys/mem/ram0.o
+
+.ARM.extab      0x000000000000211c        0x0
+ *(.ARM.extab*)
+
+.ARM.exidx      0x000000000000211c        0x0
+                0x000000000000211c                __exidx_start = .
+ *(.ARM.exidx*)
+                0x000000000000211c                __exidx_end = .
+
+.data           0x0000000020000000       0x14 load address 0x000000000000211c
+                0x0000000020000000                _data_beg = .
+ *(.data)
+ .data          0x0000000020000000        0x0 sys/mem/ram0.o
+ .data          0x0000000020000000        0x0 sys/deb/deb.o
+ .data          0x0000000020000000        0x0 sys/deb/deblow.o
+ .data          0x0000000020000000        0x0 sys/reg/pio.o
+ .data          0x0000000020000000        0x0 sys/reg/pio0.o
+ .data          0x0000000020000000        0x0 sys/hwreg.o
+ .data          0x0000000020000000        0x0 sys/reg/uart.o
+ .data          0x0000000020000000        0x0 sys/reg/uart0.o
+ .data          0x0000000020000000        0x0 sys/boot/big-bang.o
+ .data          0x0000000020000000        0x4 sys/abi/abi.o
+                0x0000000020000000                __dso_handle
+ .data          0x0000000020000004        0x0 sys/msg-1.o
+ .data          0x0000000020000004        0x0 sys/msg.o
+ .data          0x0000000020000004        0x0 io/ascii/out.o
+ .data          0x0000000020000004        0x0 io/ascii/write.o
+ .data          0x0000000020000004        0x0 util/float-conv.o
+ .data          0x0000000020000004        0x0 math/double.o
+ .data          0x0000000020000004        0x0 sys/board.o
+ .data          0x0000000020000004        0x0 sys/cortex-m.o
+ .data          0x0000000020000004        0x0 sys/reg/scs.o
+ .data          0x0000000020000004        0x0 sys/vtable.o
+ .data          0x0000000020000004        0x0 sys/trap.o
+ .data          0x0000000020000004        0x0 sys/soc.o
+ .data          0x0000000020000004        0x0 sys/reg/pmc.o
+ .data          0x0000000020000004        0x0 sys/reg/wdt.o
+ .data          0x0000000020000004        0x0 sys/reg/eefc.o
+ .data          0x0000000020000004        0x0 sys/boot/big-bang-continued.o
+ .data          0x0000000020000004        0x0 sys/table.o
+ .data          0x0000000020000004        0x0 sys/deb/deblow0.o
+ .data          0x0000000020000004       0x10 sys/sys.o
+ .data          0x0000000020000014        0x0 test/startup-1.o
+ .data          0x0000000020000014        0x0 init-sequence.o
+                0x0000000020000014                . = ALIGN (0x4)
+                0x0000000020000014                _data_end = .
+                0x0000000000080000                _ZN3sys5Flash4BASEE = 0x80000
+                0x0000000000082130                _ZN3sys5Flash4FREEE = ((0x80000 + SIZEOF (.text)) + SIZEOF (.data))
+
+.igot.plt       0x0000000020000014        0x0 load address 0x0000000000002130
+ .igot.plt      0x0000000020000014        0x0 sys/mem/ram0.o
+
+.bss            0x0000000020000014      0x164 load address 0x0000000000002130
+                0x0000000020000014                . = ALIGN (0x4)
+                0x0000000020000014                _bss_beg = .
+ *(.bss)
+ .bss           0x0000000020000014        0x0 sys/mem/ram0.o
+ .bss           0x0000000020000014        0x0 sys/deb/deb.o
+ .bss           0x0000000020000014        0x0 sys/deb/deblow.o
+ .bss           0x0000000020000014        0x0 sys/reg/pio.o
+ .bss           0x0000000020000014        0x0 sys/reg/pio0.o
+ .bss           0x0000000020000014        0x0 sys/hwreg.o
+ .bss           0x0000000020000014        0x0 sys/reg/uart.o
+ .bss           0x0000000020000014        0x0 sys/reg/uart0.o
+ .bss           0x0000000020000014        0x0 sys/boot/big-bang.o
+ .bss           0x0000000020000014        0x4 sys/abi/abi.o
+                0x0000000020000014                sys::abi::Dtor::stack
+ .bss           0x0000000020000018       0x58 sys/msg-1.o
+                0x0000000020000018                sys::Msg_1::msg
+ .bss           0x0000000020000070        0x0 sys/msg.o
+ .bss           0x0000000020000070        0x0 io/ascii/out.o
+ .bss           0x0000000020000070        0x0 io/ascii/write.o
+ .bss           0x0000000020000070        0x0 util/float-conv.o
+ .bss           0x0000000020000070        0x0 math/double.o
+ .bss           0x0000000020000070       0xfc sys/board.o
+                0x0000000020000070                sys::Board::board
+ .bss           0x000000002000016c        0x4 sys/cortex-m.o
+                0x000000002000016c                sys::CortexM::cortexM
+ .bss           0x0000000020000170        0x0 sys/reg/scs.o
+ .bss           0x0000000020000170        0x0 sys/vtable.o
+ .bss           0x0000000020000170        0x0 sys/trap.o
+ .bss           0x0000000020000170        0x0 sys/soc.o
+ .bss           0x0000000020000170        0x0 sys/reg/pmc.o
+ .bss           0x0000000020000170        0x0 sys/reg/wdt.o
+ .bss           0x0000000020000170        0x0 sys/reg/eefc.o
+ .bss           0x0000000020000170        0x0 sys/boot/big-bang-continued.o
+ .bss           0x0000000020000170        0x0 sys/table.o
+ .bss           0x0000000020000170        0x0 sys/deb/deblow0.o
+ .bss           0x0000000020000170        0x4 sys/sys.o
+ .bss           0x0000000020000174        0x4 test/startup-1.o
+                0x0000000020000174                test::Startup::startup
+ .bss           0x0000000020000178        0x0 init-sequence.o
+                0x0000000020000178                . = ALIGN (0x4)
+                0x0000000020000178                _bss_end = .
+                0x0000000020088000                STACK_TOP = 0x20088000
+
+/DISCARD/
+ *(.v4_bx)
+ *(.vfp11_veneer)
+                0x00000000400e0e00                pioA = 0x400e0e00
+                0x00000000400e1000                pioB = 0x400e1000
+                0x00000000e000ed08                VTOR = 0xe000ed08
+                0x00000000e000ed04                ICSR = 0xe000ed04
+                0x00000000e000e100                _ZN3sys3reg4NVICE = 0xe000e100
+                0x00000000400e0e00                PIOA = 0x400e0e00
+                0x00000000400e1000                PIOB = 0x400e1000
+                0x00000000400e1200                PIOC = 0x400e1200
+                0x00000000400e1400                PIOD = 0x400e1400
+                0x00000000400e0600                PMC = 0x400e0600
+                0x00000000400e0600                _ZN3sys3reg3PMCE = PMC
+                0x00000000400e0800                UART = 0x400e0800
+                0x00000000400e0a00                EEFC0 = 0x400e0a00
+                0x00000000400e0c00                EEFC1 = 0x400e0c00
+                0x00000000e000e010                TICK = 0xe000e010
+                0x00000000e000e010                _ZN3sys3reg4TICKE = TICK
+                0x00000000e000ed08                _ZN3sys7CortexM4VTORE = 0xe000ed08
+                0x0000000020088000                _ZN3sys5Board9STACK_TOPE = STACK_TOP
+                0x00000000400e1a50                _ZN3sys3reg3WDTE = 0x400e1a50
+                0x00000000400e0600                _ZN3sys3reg3PMCE = PMC
+                0x00000000400e0e00                _ZN3sys3reg4PIOAE = PIOA
+                0x00000000400e0800                _ZN3sys3reg4UARTE = UART
+                0x00000000400e0a00                _ZN3sys3reg5EEFC0E = EEFC0
+                0x00000000400e0c00                _ZN3sys3reg5EEFC1E = EEFC1
+                0x00000000e000e000                _ZN3sys3reg3SCSE = 0xe000e000
+                0x00000000400bc000                _ZN3sys3reg4TRNGE = 0x400bc000
+                0x00000000400ac000                _ZN3sys3reg6UOTGHSE = 0x400ac000
+                0x00000000400e1000                _ZN3sys3reg4PIOBE = PIOB
+                0x00000000400e1200                _ZN3sys3reg4PIOCE = PIOC
+                0x0000000020180000                _ZN3usb6Device4POOLE = 0x20180000
+                0x00000000400e0e00                _ZN3sys3SOC5PIO_AE = 0x400e0e00
+                0x00000000400e1000                _ZN3sys3SOC5PIO_BE = 0x400e1000
+                0x00000000400e1200                _ZN3sys3SOC5PIO_CE = 0x400e1200
+                0x00000000400e1400                _ZN3sys3SOC5PIO_DE = 0x400e1400
+                0x00000000400e1600                _ZN3sys3SOC5PIO_EE = 0x400e1600
+                0x00000000400e1800                _ZN3sys3SOC5PIO_FE = 0x400e1800
+                0x00000000400e0a00                _ZN3sys3reg4EEFC4EFC0E = 0x400e0a00
+                0x00000000400e0c00                _ZN3sys3reg4EEFC4EFC1E = 0x400e0c00
+                0x00000000400e0940                _ZN3sys3reg6CHIPIDE = 0x400e0940
+                0x00000000400c0000                _ZN3sys3reg3ADCE = 0x400c0000
+                0x0000000040008000                _ZN3sys3reg4SPI0E = 0x40008000
+                0x000000004000c000                _ZN3sys3reg4SPI1E = 0x4000c000
+                0x00000000400c4000                _ZN3sys3reg3DMAE = 0x400c4000
+                0x00000000400e1a60                _ZN3sys3reg3RTCE = 0x400e1a60
+                0x0000000040080000                _ZN3sys3reg3TC0E = 0x40080000
+                0x0000000040084000                _ZN3sys3reg3TC1E = 0x40084000
+                0x00000000400e1a30                _ZN3sys3reg3RTTE = 0x400e1a30
+OUTPUT(startup-1 elf32-littlearm)
+
+.comment        0x0000000000000000       0x11
+ .comment       0x0000000000000000       0x11 sys/mem/ram0.o
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000011       0x12 sys/deb/deb.o
+ .comment       0x0000000000000011       0x12 sys/deb/deblow.o
+ .comment       0x0000000000000011       0x12 sys/reg/pio.o
+ .comment       0x0000000000000011       0x12 sys/reg/pio0.o
+ .comment       0x0000000000000011       0x12 sys/hwreg.o
+ .comment       0x0000000000000011       0x12 sys/reg/uart.o
+ .comment       0x0000000000000011       0x12 sys/reg/uart0.o
+ .comment       0x0000000000000011       0x12 sys/abi/abi.o
+ .comment       0x0000000000000011       0x12 sys/msg-1.o
+ .comment       0x0000000000000011       0x12 sys/msg.o
+ .comment       0x0000000000000011       0x12 io/ascii/out.o
+ .comment       0x0000000000000011       0x12 io/ascii/write.o
+ .comment       0x0000000000000011       0x12 util/float-conv.o
+ .comment       0x0000000000000011       0x12 math/double.o
+ .comment       0x0000000000000011       0x12 sys/board.o
+ .comment       0x0000000000000011       0x12 sys/cortex-m.o
+ .comment       0x0000000000000011       0x12 sys/reg/scs.o
+ .comment       0x0000000000000011       0x12 sys/vtable.o
+ .comment       0x0000000000000011       0x12 sys/trap.o
+ .comment       0x0000000000000011       0x12 sys/soc.o
+ .comment       0x0000000000000011       0x12 sys/reg/pmc.o
+ .comment       0x0000000000000011       0x12 sys/reg/wdt.o
+ .comment       0x0000000000000011       0x12 sys/reg/eefc.o
+ .comment       0x0000000000000011       0x12 sys/boot/big-bang-continued.o
+ .comment       0x0000000000000011       0x12 sys/table.o
+ .comment       0x0000000000000011       0x12 sys/sys.o
+ .comment       0x0000000000000011       0x12 test/startup-1.o
+ .comment       0x0000000000000011       0x12 init-sequence.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/mem/ram0.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/deb/deb.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/deb/deblow.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/reg/pio.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/reg/pio0.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/hwreg.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/reg/uart.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/reg/uart0.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/abi/abi.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/msg-1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/msg.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 io/ascii/out.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 io/ascii/write.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 util/float-conv.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 math/double.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/board.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/cortex-m.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/reg/scs.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/vtable.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/trap.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/soc.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/reg/pmc.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/reg/wdt.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/reg/eefc.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/boot/big-bang-continued.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/table.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sys/sys.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 test/startup-1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 init-sequence.o
+
+.ARM.attributes
+                0x0000000000000000       0x31
+ .ARM.attributes
+                0x0000000000000000       0x33 sys/mem/ram0.o
+ .ARM.attributes
+                0x0000000000000033       0x33 sys/deb/deb.o
+ .ARM.attributes
+                0x0000000000000066       0x33 sys/deb/deblow.o
+ .ARM.attributes
+                0x0000000000000099       0x33 sys/reg/pio.o
+ .ARM.attributes
+                0x00000000000000cc       0x33 sys/reg/pio0.o
+ .ARM.attributes
+                0x00000000000000ff       0x33 sys/hwreg.o
+ .ARM.attributes
+                0x0000000000000132       0x33 sys/reg/uart.o
+ .ARM.attributes
+                0x0000000000000165       0x33 sys/reg/uart0.o
+ .ARM.attributes
+                0x0000000000000198       0x21 sys/boot/big-bang.o
+ .ARM.attributes
+                0x00000000000001b9       0x33 sys/abi/abi.o
+ .ARM.attributes
+                0x00000000000001ec       0x33 sys/msg-1.o
+ .ARM.attributes
+                0x000000000000021f       0x33 sys/msg.o
+ .ARM.attributes
+                0x0000000000000252       0x33 io/ascii/out.o
+ .ARM.attributes
+                0x0000000000000285       0x33 io/ascii/write.o
+ .ARM.attributes
+                0x00000000000002b8       0x33 util/float-conv.o
+ .ARM.attributes
+                0x00000000000002eb       0x33 math/double.o
+ .ARM.attributes
+                0x000000000000031e       0x33 sys/board.o
+ .ARM.attributes
+                0x0000000000000351       0x33 sys/cortex-m.o
+ .ARM.attributes
+                0x0000000000000384       0x33 sys/reg/scs.o
+ .ARM.attributes
+                0x00000000000003b7       0x33 sys/vtable.o
+ .ARM.attributes
+                0x00000000000003ea       0x33 sys/trap.o
+ .ARM.attributes
+                0x000000000000041d       0x33 sys/soc.o
+ .ARM.attributes
+                0x0000000000000450       0x33 sys/reg/pmc.o
+ .ARM.attributes
+                0x0000000000000483       0x33 sys/reg/wdt.o
+ .ARM.attributes
+                0x00000000000004b6       0x33 sys/reg/eefc.o
+ .ARM.attributes
+                0x00000000000004e9       0x33 sys/boot/big-bang-continued.o
+ .ARM.attributes
+                0x000000000000051c       0x33 sys/table.o
+ .ARM.attributes
+                0x000000000000054f       0x21 sys/deb/deblow0.o
+ .ARM.attributes
+                0x0000000000000570       0x33 sys/sys.o
+ .ARM.attributes
+                0x00000000000005a3       0x33 test/startup-1.o
+ .ARM.attributes
+                0x00000000000005d6       0x33 init-sequence.o

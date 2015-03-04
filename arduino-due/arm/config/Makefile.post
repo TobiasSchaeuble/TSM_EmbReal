@@ -1,0 +1,12 @@
+#---------------------------
+#Makefile.post 
+#(c) H.Buchmann FHNW 2006
+#$Id: Makefile.post 13 2011-04-10 09:15:55Z hans.buchmann@ADM.DS.FHNW.CH $
+#---------------------------
+projects:
+	${BIN_HOME}/projects.sh makefile ${_dp_PROJECTS_XML} > Makefile
+all:	${_dp_PRJ_LIST}
+clean:	
+	rm -f ${_dp_MOD_LIST} ${_dp_PRJ_LIST}
+namespace:
+	mkdir -p ${_dp_NAMESPACE}
